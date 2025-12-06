@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brad Lumley | Links</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: rgba(255, 255, 255, 0.08);
+      --card-hover: rgba(255, 255, 255, 0.14);
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-2: #a855f7;
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.18), transparent 35%),
+                  radial-gradient(circle at 80% 0%, rgba(168, 85, 247, 0.18), transparent 30%),
+                  radial-gradient(circle at 50% 80%, rgba(52, 211, 153, 0.12), transparent 40%),
+                  var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px 64px;
+    }
+
+    main {
+      width: min(960px, 100%);
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    header {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #38bdf8, #a855f7);
+      display: grid;
+      place-items: center;
+      color: #0b1021;
+      font-weight: 800;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: clamp(24px, 3vw, 30px);
+      font-weight: 800;
+    }
+
+    .header-text p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .intro {
+      margin: 0 0 20px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #cbd5e1;
+    }
+
+    .section h2 span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.12);
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 14px;
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .link-card:hover,
+    .link-card:focus-visible {
+      transform: translateY(-2px);
+      background: var(--card-hover);
+      border-color: rgba(56, 189, 248, 0.5);
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15);
+      outline: none;
+    }
+
+    .link-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: rgba(56, 189, 248, 0.14);
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      color: #e0f2fe;
+    }
+
+    .link-text strong {
+      display: block;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .link-text span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer {
+      margin-top: 32px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 560px) {
+      main {
+        padding: 24px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .avatar {
+        width: 72px;
+        height: 72px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="avatar" aria-hidden="true">BL</div>
+      <div class="header-text">
+        <h1>Brad Lumley</h1>
+        <p>Healthcare leader, digital strategist, and gravel cycling enthusiast.</p>
+      </div>
+    </header>
+
+    <p class="intro">Explore my professional work in healthcare innovation and connect with my cycling adventures. Pick a destination below.</p>
+
+    <section class="section" aria-labelledby="professional">
+      <h2 id="professional"><span aria-hidden="true"></span>Professional</h2>
+      <ul class="links">
+        <li><a class="link-card" href="https://www.linkedin.com/in/bradlumley/" target="_blank" rel="noreferrer">
+          <div class="link-icon" aria-hidden="true">in</div>
+          <div class="link-text">
+            <strong>LinkedIn</strong>
+            <span>Connect with me professionally</span>
+          </div>
+        </a></li>
+        <li><a class="link-card" href="https://refhealth.consulting" target="_blank" rel="noreferrer">
+          <div class="link-icon" aria-hidden="true">🏥</div>
+          <div class="link-text">
+            <strong>RefHealth Consulting</strong>
+            <span>Healthcare innovation projects</span>
+          </div>
+        </a></li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="bikes">
+      <h2 id="bikes"><span aria-hidden="true"></span>BIKES!</h2>
+      <ul class="links">
+        <li><a class="link-card" href="https://tngraveldad.com" target="_blank" rel="noreferrer">
+          <div class="link-icon" aria-hidden="true">🚲</div>
+          <div class="link-text">
+            <strong>TN Gravel Dad</strong>
+            <span>Events, musings, and kit</span>
+          </div>
+        </a></li>
+        <li><a class="link-card" href="https://georgiagravel.com" target="_blank" rel="noreferrer">
+          <div class="link-icon" aria-hidden="true">🌄</div>
+          <div class="link-text">
+            <strong>Georgia Gravel</strong>
+            <span>Routes and gravel community</span>
+          </div>
+        </a></li>
+        <li><a class="link-card" href="https://substack.com/@tngraveldad" target="_blank" rel="noreferrer">
+          <div class="link-icon" aria-hidden="true">📰</div>
+          <div class="link-text">
+            <strong>Substack</strong>
+            <span>Stories from the trail</span>
+          </div>
+        </a></li>
+        <li><a class="link-card" href="https://www.instagram.com/tngraveldad/" target="_blank" rel="noreferrer">
+          <div class="link-icon" aria-hidden="true">📸</div>
+          <div class="link-text">
+            <strong>Instagram</strong>
+            <span>Ride snapshots and reels</span>
+          </div>
+        </a></li>
+        <li><a class="link-card" href="https://facebook.com/tngraveldad" target="_blank" rel="noreferrer">
+          <div class="link-icon" aria-hidden="true">👍</div>
+          <div class="link-text">
+            <strong>Facebook</strong>
+            <span>Community updates and events</span>
+          </div>
+        </a></li>
+      </ul>
+    </section>
+
+    <footer>
+      Built with care for the road ahead.
+    </footer>
+  </main>
+</body>
+</html>
