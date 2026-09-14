@@ -17,27 +17,27 @@ colors:
   icon-tint-text: "#e0f2fe"
 typography:
   headline:
-    fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "IBM Plex Sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: "clamp(1.5rem, 3vw, 1.875rem)"
     fontWeight: 800
     lineHeight: 1.2
   title:
-    fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "IBM Plex Sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: "15px"
     fontWeight: 700
     lineHeight: 1.3
   section-label:
-    fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "IBM Plex Sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: "18px"
     fontWeight: 400
     letterSpacing: "0.08em"
   body:
-    fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "IBM Plex Sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: "15px"
     fontWeight: 400
     lineHeight: 1.6
   caption:
-    fontFamily: "Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    fontFamily: "IBM Plex Sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
     fontSize: "13px"
     fontWeight: 400
 rounded:
@@ -114,9 +114,9 @@ A near-black navy base lit by a restrained duo of glow colors, plus one ambient-
 
 ## Typography
 
-**Body/Display Font:** Inter (with system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif fallback)
+**Body/Display Font:** IBM Plex Sans (with system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif fallback)
 
-**Character:** One typeface carries the entire page. Inter's geometric neutrality reads as calm and technical rather than expressive — hierarchy comes entirely from size, weight, color, and letter-spacing, never from a second font.
+**Character:** One typeface carries the entire page. IBM Plex Sans's engineering pedigree and slightly technical letterforms reinforce the data/analytics identity without reading as generic — hierarchy comes entirely from size, weight, color, and letter-spacing, never from a second font.
 
 ### Hierarchy
 - **Headline** (800, `clamp(24px, 3vw, 30px)`, line-height 1.2): the page name, appearing once in the header.
@@ -126,7 +126,7 @@ A near-black navy base lit by a restrained duo of glow colors, plus one ambient-
 - **Caption** (400, 13px, color Slate Muted): the footer line; shares size with link-card secondary text.
 
 ### Named Rules
-**The Loaded-Weight Rule.** Only declare a font-weight that's actually fetched from Google Fonts (`400;600;700;800`). A weight outside that set silently resolves to the nearest loaded one in-browser — if the Headline weight ever changes, add it to the fetch URL in the same change, not after.
+**The Loaded-Weight Rule.** Only declare a font-weight that's actually fetched from Google Fonts (`400;700;800`) — and only fetch weights something on the page actually uses. A weight outside that set silently resolves to the nearest loaded one in-browser; a fetched-but-unused weight is wasted payload. Keep the fetch URL and the declared weights in lockstep.
 
 ## Layout
 

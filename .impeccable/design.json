@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-14T01:24:03Z",
+  "generatedAt": "2026-09-14T01:26:33Z",
   "title": "Design System: Brad Lumley",
   "extensions": {
     "colorMeta": {
@@ -75,7 +75,7 @@
     ],
     "rules": [
       { "name": "The One Accent Rule", "body": "Sky-blue is the only color allowed to signal interactivity — hover, focus, and icon tint all route through it. Violet and emerald are ambient-background colors only and never appear on a clickable element.", "section": "colors" },
-      { "name": "The Loaded-Weight Rule", "body": "Only declare a font-weight that's actually fetched from Google Fonts (400;600;700;800). A weight outside that set silently resolves to the nearest loaded one in-browser — if the Headline weight ever changes, add it to the fetch URL in the same change, not after.", "section": "typography" },
+      { "name": "The Loaded-Weight Rule", "body": "Only declare a font-weight that's actually fetched from Google Fonts (400;700;800) — and only fetch weights something on the page actually uses. A weight outside that set silently resolves to the nearest loaded one in-browser; a fetched-but-unused weight is wasted payload. Keep the fetch URL and the declared weights in lockstep.", "section": "typography" },
       { "name": "The Hover-Earns-Depth Rule", "body": "No card casts a shadow at rest. Elevation is a response to interaction, never a static decoration.", "section": "elevation" },
       { "name": "The AA Floor Rule", "body": "Slate Muted must clear 4.5:1 against every surface it sits on (currently ≥4.9:1 against the card surface, ≥8.8:1 against the raw background) — the WCAG AA bar PRODUCT.md requires for this site. If a future palette change moves Slate Muted or its background, re-check contrast before shipping.", "section": "colors" }
     ],
