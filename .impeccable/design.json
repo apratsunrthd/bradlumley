@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-14T01:20:06Z",
+  "title": "Design System: Brad Lumley",
+  "extensions": {
+    "colorMeta": {
+      "midnight": { "role": "neutral", "displayName": "Midnight", "canonical": "oklch(18% 0.03 260)", "tonalRamp": ["oklch(10% 0.02 260)", "oklch(18% 0.03 260)", "oklch(28% 0.035 260)", "oklch(38% 0.04 260)", "oklch(50% 0.03 260)", "oklch(65% 0.025 260)", "oklch(80% 0.015 260)", "oklch(95% 0.008 260)"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "oklch(92% 0.01 250)", "tonalRamp": ["oklch(20% 0.01 250)", "oklch(32% 0.01 250)", "oklch(45% 0.01 250)", "oklch(58% 0.01 250)", "oklch(70% 0.01 250)", "oklch(82% 0.01 250)", "oklch(92% 0.01 250)", "oklch(97% 0.005 250)"] },
+      "slate-muted": { "role": "neutral", "displayName": "Slate Muted", "canonical": "oklch(68% 0.03 250)", "tonalRamp": ["oklch(15% 0.01 250)", "oklch(28% 0.02 250)", "oklch(40% 0.025 250)", "oklch(52% 0.03 250)", "oklch(60% 0.03 250)", "oklch(68% 0.03 250)", "oklch(80% 0.02 250)", "oklch(92% 0.01 250)"] },
+      "heading-slate": { "role": "neutral", "displayName": "Heading Slate", "canonical": "oklch(85% 0.015 250)", "tonalRamp": ["oklch(20% 0.01 250)", "oklch(33% 0.012 250)", "oklch(46% 0.014 250)", "oklch(59% 0.015 250)", "oklch(72% 0.015 250)", "oklch(85% 0.015 250)", "oklch(93% 0.01 250)", "oklch(97% 0.005 250)"] },
+      "signal-cyan": { "role": "primary", "displayName": "Signal Cyan", "canonical": "oklch(75% 0.14 230)", "tonalRamp": ["oklch(15% 0.05 230)", "oklch(28% 0.08 230)", "oklch(40% 0.11 230)", "oklch(52% 0.13 230)", "oklch(64% 0.14 230)", "oklch(75% 0.14 230)", "oklch(85% 0.10 230)", "oklch(95% 0.04 230)"] },
+      "ultraviolet": { "role": "secondary", "displayName": "Ultraviolet", "canonical": "oklch(62% 0.23 305)", "tonalRamp": ["oklch(15% 0.06 305)", "oklch(28% 0.10 305)", "oklch(40% 0.15 305)", "oklch(50% 0.19 305)", "oklch(62% 0.23 305)", "oklch(72% 0.20 305)", "oklch(84% 0.12 305)", "oklch(95% 0.05 305)"] },
+      "ambient-emerald": { "role": "tertiary", "displayName": "Ambient Emerald", "canonical": "oklch(75% 0.15 160)", "tonalRamp": ["oklch(15% 0.05 160)", "oklch(28% 0.08 160)", "oklch(40% 0.11 160)", "oklch(52% 0.13 160)", "oklch(64% 0.14 160)", "oklch(75% 0.15 160)", "oklch(85% 0.10 160)", "oklch(95% 0.04 160)"] }
+    },
+    "typographyMeta": {
+      "headline": { "displayName": "Headline", "purpose": "The page name, once, in the header." },
+      "section-label": { "displayName": "Section Label", "purpose": "Uppercase group titles ('Professional', 'Lab') beside the gradient status dot." },
+      "title": { "displayName": "Title", "purpose": "Each link-card's bolded name." },
+      "body": { "displayName": "Body", "purpose": "Intro sentence and link-card descriptions." },
+      "caption": { "displayName": "Caption", "purpose": "Footer line and link-card secondary text." }
+    },
+    "shadows": [
+      { "name": "panel-ambient", "value": "0 18px 40px rgba(0, 0, 0, 0.3)", "purpose": "Resting shadow beneath the main glass panel." },
+      { "name": "card-hover-glow", "value": "0 10px 30px rgba(56, 189, 248, 0.15)", "purpose": "Appears only on a link-card's :hover/:focus-visible." }
+    ],
+    "motion": [
+      { "name": "card-transition", "value": "160ms ease", "purpose": "Default transition for link-card transform/background/border-color/shadow on hover and focus." }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "560px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Main Panel",
+      "kind": "custom",
+      "refersTo": "panel",
+      "description": "The single frosted-glass container that holds the entire page.",
+      "html": "<main class=\"ds-panel\">Panel content</main>",
+      "css": ".ds-panel { width: min(960px, 100%); background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 32px; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3); backdrop-filter: blur(8px); }"
+    },
+    {
+      "name": "Link Card",
+      "kind": "custom",
+      "refersTo": "link-card",
+      "description": "The primary interactive unit — an icon, a title, and a caption, used for every professional link and Lab project.",
+      "html": "<a class=\"ds-link-card\" href=\"#\"><div class=\"ds-link-icon\" aria-hidden=\"true\">🏥</div><div class=\"ds-link-text\"><strong>RefHealth Consulting</strong><span>Healthcare innovation projects</span></div></a>",
+      "css": ".ds-link-card { display: flex; align-items: center; gap: 12px; padding: 14px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 14px; text-decoration: none; color: #e2e8f0; transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, box-shadow 160ms ease; } .ds-link-card:hover, .ds-link-card:focus-visible { transform: translateY(-2px); background: rgba(255, 255, 255, 0.14); border-color: rgba(56, 189, 248, 0.5); box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15); outline: none; } .ds-link-card[aria-disabled=\"true\"] { cursor: default; opacity: 0.6; } .ds-link-card[aria-disabled=\"true\"]:hover { transform: none; background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.06); box-shadow: none; } .ds-link-icon { width: 38px; height: 38px; border-radius: 12px; background: rgba(56, 189, 248, 0.14); display: grid; place-items: center; font-size: 18px; color: #e0f2fe; flex-shrink: 0; } .ds-link-text strong { display: block; font-weight: 700; font-size: 15px; } .ds-link-text span { color: #94a3b8; font-size: 13px; }"
+    },
+    {
+      "name": "Avatar",
+      "kind": "custom",
+      "refersTo": "avatar",
+      "description": "The real-headshot identity image in the header.",
+      "html": "<img class=\"ds-avatar\" src=\"\" alt=\"\" width=\"80\" height=\"80\">",
+      "css": ".ds-avatar { width: 80px; height: 80px; border-radius: 22px; object-fit: cover; flex-shrink: 0; background: #1e293b; }"
+    },
+    {
+      "name": "Section Header",
+      "kind": "custom",
+      "refersTo": "section-label",
+      "description": "The uppercase group title with its cyan-to-violet gradient status dot; used once per link group.",
+      "html": "<h2 class=\"ds-section-label\"><span class=\"ds-section-dot\" aria-hidden=\"true\"></span>Professional</h2>",
+      "css": ".ds-section-label { display: flex; align-items: center; gap: 10px; margin: 0; font-size: 18px; text-transform: uppercase; letter-spacing: 0.08em; color: #cbd5e1; } .ds-section-dot { width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, #38bdf8, #a855f7); box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.12); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Late-Night Console",
+    "overview": "One frosted-glass panel floats in the dark over a soft three-color ambient wash — a quiet instrument panel rather than a marketing surface. Chrome is minimal on purpose: a headshot, a title line, two labeled groups of link-tiles, and nothing else competing for attention. The page is calm and professional without reading as corporate — there's no stock photography, no illustration, no hero imagery beyond the real headshot; typography, spacing, and a single restrained accent color do all the work of establishing credibility.\n\nDepth and color are both rationed. Sky-blue is the only hue allowed to signal interactivity; violet and a third emerald hue exist purely in the ambient background glow and are never asked to do UI work. Elevation follows the same discipline — the panel casts one soft ambient shadow at rest, and every card underneath it stays flat until a visitor actually hovers it.",
+    "keyCharacteristics": [
+      "Single frosted-glass panel afloat over a three-color ambient wash (cyan, violet, emerald)",
+      "Sky-blue (#38bdf8) is the only color that signals interactivity; violet and emerald are ambient-only",
+      "Zero imagery beyond the real headshot avatar — no illustration, no stock photography",
+      "Flat at rest, lifted only on hover — depth is earned by interaction, not applied by default"
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Sky-blue is the only color allowed to signal interactivity — hover, focus, and icon tint all route through it. Violet and emerald are ambient-background colors only and never appear on a clickable element.", "section": "colors" },
+      { "name": "The Loaded-Weight Rule", "body": "Only request font weights actually fetched from Google Fonts (400;600;700). The header's declared weight of 800 falls outside that set and silently resolves to the nearest loaded weight (700) in-browser — either load 800 explicitly or drop the declared weight to 700.", "section": "typography" },
+      { "name": "The Hover-Earns-Depth Rule", "body": "No card casts a shadow at rest. Elevation is a response to interaction, never a static decoration.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep Signal Cyan as the only color that signals interactivity — hover, focus, and icon tint all route through it.",
+      "Do keep the main panel's ambient shadow + blur as the system's single resting shadow; everything else stays flat until hovered.",
+      "Do scale corner radius with element size (24px panel → 14px card → 12px badge) rather than picking one radius for everything.",
+      "Do require a real photo for the avatar/OG/favicon set — no placeholder or initials avatar."
+    ],
+    "donts": [
+      "Don't put violet or emerald on an interactive element — they're ambient-only and the section-header dot; giving them a hover/focus role breaks the One Accent Rule.",
+      "Don't add a shadow to a card at rest — depth here is earned by interaction, not applied by default.",
+      "Don't declare a font-weight Google Fonts hasn't loaded (only 400/600/700 are fetched) — the header's 800 declaration already does this silently; fix it rather than compounding it elsewhere.",
+      "Don't ship muted text below 4.5:1 contrast — the current Slate Muted value measures ~3.8:1 on the card surface, which fails the WCAG AA bar PRODUCT.md now requires."
+    ]
+  }
+}
