@@ -14,11 +14,13 @@ come up.
 
 - [ ] Pick the first side project to feature in the Lab section once one is
       ready to show publicly.
-- [ ] Review/merge PR #8 (headshot, favicon, OG tags, email contact card,
-      jobTitle → "VP, Data & Analytics").
-- [ ] After #8 merges, confirm in a real share (Slack/iMessage/LinkedIn) that
-      the OG image/link preview renders correctly, and that the favicon shows
-      in the browser tab.
+- [x] Review/merge PR #8 (headshot, favicon, OG tags, email contact card,
+      jobTitle → "VP, Data & Analytics"). Merged.
+- [ ] Review/merge PR #9 (fix top-of-head crop on `og-image.jpg`,
+      `avatar.jpg`, `apple-touch-icon.png`, and both favicons).
+- [ ] After #9 merges, confirm in a real share (Slack/iMessage/LinkedIn) that
+      the OG image/link preview renders correctly with full headroom, and
+      that the favicon shows in the browser tab.
 - [ ] DNS automation prep (domain is at Namecheap) — decide which path, then
       gather the matching info before asking Claude to automate the
       subdomain-record step:
