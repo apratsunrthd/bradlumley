@@ -29,6 +29,9 @@ no content cadence: see HANDOFF.md for why.
   and favicon/apple-touch-icon — no more placeholder initials avatar.
 - Open Graph + Twitter Card meta tags added, so link previews (Slack,
   iMessage, LinkedIn) show a title/description/image.
+- `assets/og-image.jpg` re-cropped (PR #9) with headroom above the head —
+  the original crop was nearly flush with the top of the head, which
+  clipped the forehead in square link-preview thumbnails.
 - Person JSON-LD includes `image`, `email`, and `knowsAbout`; `jobTitle` is
   "VP, Data & Analytics" (chosen over vaguer executive-level phrasing —
   research showed standard concrete titles rank higher in recruiter search).
