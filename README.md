@@ -1,6 +1,6 @@
 # Brad Lumley Links
 
-A polished, linktree-style landing page to browse Brad Lumley's professional work and cycling adventures.
+A polished, linktree-style landing page to browse Brad Lumley's professional work.
 
 ## Preview
 
@@ -14,4 +14,3 @@ Then visit http://localhost:8000/ to preview the page.
 
 ## Links included
 - Professional: LinkedIn, RefHealth Consulting
-- Bikes!: TN Gravel Dad, Georgia Gravel, Substack, Instagram, Facebook
