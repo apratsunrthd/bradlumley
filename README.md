@@ -1,6 +1,12 @@
-# Brad Lumley Links
+# Brad Lumley
 
-A polished, linktree-style landing page to browse Brad Lumley's professional work.
+Personal identity page and side-project launchpad for `bradlumley.com`.
+
+Two jobs:
+- A canonical, machine-readable "who is Brad Lumley" page (professional
+  links + structured data), separate from [RefHealth Consulting](https://refhealth.consulting).
+- A home base for Brad's side-project MVPs — each shipped project gets a
+  subdomain (`projectname.bradlumley.com`) and a card in the "Lab" section.
 
 ## Preview
 
@@ -14,3 +20,7 @@ Then visit http://localhost:8000/ to preview the page.
 
 ## Links included
 - Professional: LinkedIn, RefHealth Consulting
+- Lab: side projects (placeholder until the first one ships)
+
+See `BRIEF.md` for the current state and rationale, and `HANDOFF.md` for
+architecture, deployment, and the checklist for adding a new Lab project.
