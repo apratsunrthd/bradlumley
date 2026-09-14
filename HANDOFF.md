@@ -104,26 +104,32 @@ When a Claude Code side-project MVP is ready to show:
 
 ## Search engine submission
 
-`robots.txt`, `sitemap.xml`, and the JSON-LD only help crawlers that already
-know to look. Neither Google nor Bing auto-discovers a brand-new domain
-quickly without a nudge, and this step requires logging into each console
-with Brad's account — Claude can't do it. Not yet done as of 2026-09-13; see
-`TODO.md`.
+Done 2026-09-14, via gstack `/browse` driving a real Chrome session (Brad
+signed into Google and Namecheap in the browser window; Claude drove the UI
+from there — no API access needed for either step).
 
-1. **Google Search Console** (search.google.com/search-console):
-   - Add `bradlumley.com` as a property (Domain property, not URL-prefix, so
-     it covers subdomains like `projectname.bradlumley.com` too).
-   - Verify ownership via DNS TXT record at the registrar (Namecheap) — GSC
-     gives the exact record value after you add the property.
-   - Submit `https://bradlumley.com/sitemap.xml` under Sitemaps.
-2. **Bing Webmaster Tools** (bing.com/webmasters):
-   - Bing can import a verified Google Search Console property directly
-     (faster than re-verifying), or verify separately via the same DNS TXT
-     approach.
-   - Submit the same sitemap URL.
-3. Once both are verified, if DNS ever moves to a provider with API access
-   (see the DNS automation TODO), the verification TXT records should be
-   preserved/re-added as part of that migration.
+1. **Google Search Console** (search.google.com/search-console), account
+   `apratsunrthd@gmail.com`:
+   - Added `bradlumley.com` as a Domain property.
+   - Verified via DNS TXT record — added at Namecheap (Advanced DNS →
+     `TXT Record`, host `@`, value `google-site-verification=...`).
+   - Submitted `https://bradlumley.com/sitemap.xml` under Sitemaps (status:
+     Success). A stale `http://` sitemap entry from Dec 2025 with only 1
+     discovered page also exists on the property — harmless, can be ignored
+     or removed later.
+2. **Bing Webmaster Tools** (bing.com/webmasters), same Google account:
+   - Imported the site via "Import from Google Search Console" (OAuth,
+     view-only Search Console scope) rather than re-verifying — faster, and
+     avoided also importing the unrelated `tngraveldad.com` property that
+     showed up in the same GSC account.
+   - Submitted `https://bradlumley.com/sitemap.xml` manually (the import
+     didn't carry the sitemap over automatically); status: Processing at
+     submission time.
+3. If DNS ever moves to a provider with API access (see the DNS automation
+   TODO), re-add the Google verification TXT record as part of that
+   migration — removing it drops Search Console verification.
+4. Nothing left to do here unless Bing's processing surfaces an error —
+   check bing.com/webmasters → Sitemaps for bradlumley.com if so.
 
 ## Conventions
 
@@ -138,7 +144,5 @@ with Brad's account — Claude can't do it. Not yet done as of 2026-09-13; see
 
 ## Open threads
 
-- Google Search Console / Bing Webmaster Tools submission not yet done —
-  see "Search engine submission" above.
 - DNS/subdomain provisioning is unautomated — revisit if the project cadence
   picks up enough to make the manual step annoying.
