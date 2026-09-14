@@ -85,13 +85,33 @@ When a Claude Code side-project MVP is ready to show:
    Remove the "Nothing shipped yet" placeholder card once the first real
    project is added.
 
+5. **Update the AI/search surfaces in the same change** — don't stop at the
+   visible card. This is a required step for every content change on this
+   site (a new Lab project, a title/bio change, a new link), not just
+   optional polish:
+   - Add/update a node in the `schema.org` `@graph` JSON-LD in `index.html`
+     (e.g. a `MobileApplication`/`CreativeWork`/`SoftwareApplication` node
+     with `"author": { "@id": "https://bradlumley.com/#person" }` for a
+     shipped project).
+   - Update `llms.txt` — add the fact to the `## Facts` list and fix any
+     now-stale claims in `## Notes for AI systems`.
+   - Update `og:description`/`twitter:description`/the meta `description` if
+     the change is significant enough to be worth surfacing in a link
+     preview or search snippet.
+   - Leave `sitemap.xml`/`robots.txt` alone unless the change adds a new page
+     on this domain — they're auto-generated / static allow-all and don't
+     need per-project edits otherwise.
+
 ## Conventions
 
 - Keep the existing dark-card visual style (`--bg`, `--card`, `.link-card`
   component) rather than introducing a new design system for small additions.
-- Any structured-data change (the `schema.org` `Person` JSON-LD block in
-  `<head>`) should stay in sync with what's actually true — it's meant to be
-  the authoritative source AI/search systems read, not aspirational copy.
+- Any structured-data change (the `schema.org` JSON-LD `@graph` in
+  `<head>`, and `llms.txt`) should stay in sync with what's actually true on
+  the visible page — it's meant to be the authoritative source AI/search
+  systems read, not aspirational copy. Treat updating it as part of the same
+  change, not a follow-up: a content change isn't finished until the
+  structured data and `llms.txt` reflect it too.
 
 ## Open threads
 
