@@ -12,8 +12,9 @@ come up.
 
 ## For Brad (human)
 
-- [ ] Pick the first side project to feature in the Lab section once one is
-      ready to show publicly.
+- [x] Pick the first side project to feature in the Lab section once one is
+      ready to show publicly. Undertow (iPhone focus app, live on the App
+      Store) added.
 - [x] Review/merge PR #8 (headshot, favicon, OG tags, email contact card,
       jobTitle → "VP, Data & Analytics"). Merged.
 - [ ] Review/merge PR #9 (fix top-of-head crop on `og-image.jpg`,

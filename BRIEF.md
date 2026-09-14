@@ -24,7 +24,8 @@ no content cadence: see HANDOFF.md for why.
 - Static single-page site (`index.html`), no build step, no framework.
 - Hosted on GitHub Pages, custom domain via `CNAME` → `bradlumley.com`.
 - Sections: Professional (LinkedIn, RefHealth Consulting, Email) and Lab
-  (currently a placeholder — "Nothing shipped yet").
+  (first project live: Undertow, an iPhone focus app, linking to its
+  App Store listing).
 - Real headshot in place (`assets/`) for the avatar, OG/Twitter share image,
   and favicon/apple-touch-icon — no more placeholder initials avatar.
 - Open Graph + Twitter Card meta tags added, so link previews (Slack,
