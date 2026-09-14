@@ -22,11 +22,11 @@ come up.
 - [ ] Confirm in a real share (Slack/iMessage/LinkedIn) that the OG
       image/link preview renders correctly with full headroom, and that the
       favicon shows in the browser tab.
-- [ ] Submit the site to Google Search Console and Bing Webmaster Tools.
-      `robots.txt`/`sitemap.xml`/JSON-LD only help once a search engine
-      actually knows to look — this requires logging into each console and
-      can't be done by Claude. See the "Search engine submission" checklist
-      in `HANDOFF.md`.
+- [x] Submit the site to Google Search Console and Bing Webmaster Tools.
+      Done 2026-09-14 via gstack `/browse` (Google account sign-in and the
+      Namecheap DNS TXT record still needed Brad in the loop). Domain
+      property verified, sitemap submitted on both. See "Search engine
+      submission" in `HANDOFF.md` for status and next steps.
 - [ ] DNS automation prep (domain is at Namecheap) — decide which path, then
       gather the matching info before asking Claude to automate the
       subdomain-record step:
