@@ -102,6 +102,29 @@ When a Claude Code side-project MVP is ready to show:
      on this domain — they're auto-generated / static allow-all and don't
      need per-project edits otherwise.
 
+## Search engine submission
+
+`robots.txt`, `sitemap.xml`, and the JSON-LD only help crawlers that already
+know to look. Neither Google nor Bing auto-discovers a brand-new domain
+quickly without a nudge, and this step requires logging into each console
+with Brad's account — Claude can't do it. Not yet done as of 2026-09-13; see
+`TODO.md`.
+
+1. **Google Search Console** (search.google.com/search-console):
+   - Add `bradlumley.com` as a property (Domain property, not URL-prefix, so
+     it covers subdomains like `projectname.bradlumley.com` too).
+   - Verify ownership via DNS TXT record at the registrar (Namecheap) — GSC
+     gives the exact record value after you add the property.
+   - Submit `https://bradlumley.com/sitemap.xml` under Sitemaps.
+2. **Bing Webmaster Tools** (bing.com/webmasters):
+   - Bing can import a verified Google Search Console property directly
+     (faster than re-verifying), or verify separately via the same DNS TXT
+     approach.
+   - Submit the same sitemap URL.
+3. Once both are verified, if DNS ever moves to a provider with API access
+   (see the DNS automation TODO), the verification TXT records should be
+   preserved/re-added as part of that migration.
+
 ## Conventions
 
 - Keep the existing dark-card visual style (`--bg`, `--card`, `.link-card`
@@ -115,6 +138,7 @@ When a Claude Code side-project MVP is ready to show:
 
 ## Open threads
 
-- No projects have shipped to the Lab section yet.
+- Google Search Console / Bing Webmaster Tools submission not yet done —
+  see "Search engine submission" above.
 - DNS/subdomain provisioning is unautomated — revisit if the project cadence
   picks up enough to make the manual step annoying.
