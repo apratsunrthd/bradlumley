@@ -5,15 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brad Lumley</title>
   <meta name="description" content="Brad Lumley — VP, Data & Analytics in healthcare, building and shipping side-project MVPs. Professional links and a running log of what's in the lab.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bradlumley.com/">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bradlumley.com">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://bradlumley.com/">
+  <meta property="og:site_name" content="Brad Lumley">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Brad Lumley">
   <meta property="og:description" content="VP, Data & Analytics in healthcare, building and shipping side-project MVPs.">
   <meta property="og:image" content="https://bradlumley.com/assets/og-image.jpg">
+  <meta property="profile:first_name" content="Brad">
+  <meta property="profile:last_name" content="Lumley">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Brad Lumley">
   <meta name="twitter:description" content="VP, Data & Analytics in healthcare, building and shipping side-project MVPs.">
@@ -222,23 +228,38 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Brad Lumley",
-  "url": "https://bradlumley.com",
-  "image": "https://bradlumley.com/assets/og-image.jpg",
-  "email": "mailto:bradmlumley@gmail.com",
-  "jobTitle": "VP, Data & Analytics",
-  "knowsAbout": [
-    "Data Analytics",
-    "Business Intelligence",
-    "Data Strategy",
-    "Healthcare Technology",
-    "Software Prototyping",
-    "Applied AI"
-  ],
-  "sameAs": [
-    "https://www.linkedin.com/in/bradlumley/",
-    "https://refhealth.consulting"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://bradlumley.com/#person",
+      "name": "Brad Lumley",
+      "url": "https://bradlumley.com/",
+      "image": "https://bradlumley.com/assets/og-image.jpg",
+      "description": "VP, Data & Analytics in healthcare, building and shipping side-project MVPs.",
+      "email": "mailto:bradmlumley@gmail.com",
+      "jobTitle": "VP, Data & Analytics",
+      "knowsAbout": [
+        "Data Analytics",
+        "Business Intelligence",
+        "Data Strategy",
+        "Healthcare Technology",
+        "Software Prototyping",
+        "Applied AI"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/bradlumley/",
+        "https://refhealth.consulting"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bradlumley.com/#website",
+      "url": "https://bradlumley.com/",
+      "name": "Brad Lumley",
+      "description": "Brad Lumley's canonical identity page and side-project launchpad.",
+      "publisher": { "@id": "https://bradlumley.com/#person" },
+      "inLanguage": "en-US"
+    }
   ]
 }
 </script>
