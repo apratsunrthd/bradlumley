@@ -14,11 +14,11 @@ come up.
 
 - [ ] Pick the first side project to feature in the Lab section once one is
       ready to show publicly.
-- [ ] Decide whether the `jobTitle` in the `Person` JSON-LD ("Data & Analytics
-      Executive") is the phrasing you want public, or adjust it.
-- [ ] Merge PR #4 (cycling removal) and this identity/launchpad PR, in either
-      order — they're stacked, so land #4 first if possible to keep history
-      clean.
+- [ ] Review/merge PR #8 (headshot, favicon, OG tags, email contact card,
+      jobTitle → "VP, Data & Analytics").
+- [ ] After #8 merges, confirm in a real share (Slack/iMessage/LinkedIn) that
+      the OG image/link preview renders correctly, and that the favicon shows
+      in the browser tab.
 - [ ] DNS automation prep (domain is at Namecheap) — decide which path, then
       gather the matching info before asking Claude to automate the
       subdomain-record step:

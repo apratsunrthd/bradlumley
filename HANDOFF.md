@@ -22,6 +22,16 @@ Orientation for anyone (human or model) picking this repo up cold.
 ## Where things live
 
 - `index.html` — the entire site.
+- `assets/` — images referenced by `index.html`:
+  - `avatar.jpg` (480x480) — header avatar, square crop
+  - `og-image.jpg` (1200x630) — Open Graph / Twitter Card share image
+  - `favicon-32.png`, `favicon-16.png`, `apple-touch-icon.png` (180x180) —
+    tight face crop, used for browser tab + iOS home screen icon
+  - `headshot-source.jpg` — downsized (2000x3000) archival copy of the
+    original headshot, kept so future crops don't need Brad to re-upload.
+    Not referenced by the page itself.
+  All generated from one source photo via `sips`/Pillow (`uv run --with
+  pillow python3`) — see PR #8 for the crop-box math if new crops are needed.
 - `CNAME` — custom domain for GitHub Pages.
 - `sitemap.xml` — auto-generated, don't hand-edit (the Action overwrites it).
 - `inject-ga.js` — GA injection script, run by the Action, not meant to be run
@@ -38,6 +48,12 @@ Orientation for anyone (human or model) picking this repo up cold.
   double-inject the snippet on the next push.
 - Standing repo policy (see the user's global CLAUDE.md) requires all material
   work to land via branch → commit → PR, never directly on `main`.
+- `index.html` references images with root-relative paths (`/assets/...`),
+  correct for the deployed site (GitHub Pages serves this repo at domain
+  root). Previewing via `file://` locally breaks those paths (resolves
+  against the filesystem root, not the repo root) — use a local HTTP server
+  rooted at the repo (`python3 -m http.server`) instead when checking a
+  change with `browse`/screenshots before pushing.
 
 ## Adding a new "Lab" project (side-project launchpad pattern)
 
