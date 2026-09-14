@@ -4,7 +4,7 @@ description: Personal identity page and side-project launchpad for bradlumley.co
 colors:
   midnight: "#0f172a"
   ink: "#e2e8f0"
-  slate-muted: "#94a3b8"
+  slate-muted: "#a9b8ca"
   signal-cyan: "#38bdf8"
   ultraviolet: "#a855f7"
   heading-slate: "#cbd5e1"
@@ -103,14 +103,14 @@ A near-black navy base lit by a restrained duo of glow colors, plus one ambient-
 - **Midnight** (`#0f172a`): page background base, beneath the ambient gradients.
 - **Card Surface** / **Card Surface Hover** (`rgba(255,255,255,0.08)` / `rgba(255,255,255,0.14)`): the glass panel's link-card background at rest and on hover/focus.
 - **Ink** (`#e2e8f0`): primary text color (headline, link-card content).
-- **Slate Muted** (`#94a3b8`): secondary/meta text — intro copy, link-card captions, footer.
+- **Slate Muted** (`#a9b8ca`): secondary/meta text — intro copy, link-card captions, footer.
 - **Heading Slate** (`#cbd5e1`): section-label text ("Professional", "Lab").
 - **Hairline** / **Hairline Soft** (`rgba(255,255,255,0.08)` / `rgba(255,255,255,0.06)`): the panel's outer border and each link-card's border, respectively.
 
 ### Named Rules
 **The One Accent Rule.** Sky-blue is the only color allowed to signal interactivity — hover, focus, and icon tint all route through it. Violet and emerald are ambient-background colors only and never appear on a clickable element.
 
-**Known defect, not a pattern to copy:** Slate Muted (`#94a3b8`) on the card surface measures ~3.8:1 contrast — below the WCAG AA 4.5:1 minimum that PRODUCT.md now requires for this site. Treat this as an open fix (see `/impeccable audit` or `/impeccable typeset`), not as an acceptable muted-text value for new work.
+**The AA Floor Rule.** Slate Muted must clear 4.5:1 against every surface it sits on (currently ≥4.9:1 against the card surface, ≥8.8:1 against the raw background) — the WCAG AA bar PRODUCT.md requires for this site. If a future palette change moves Slate Muted or its background, re-check contrast before shipping; don't silently drift back below AA.
 
 ## Typography
 
@@ -126,7 +126,7 @@ A near-black navy base lit by a restrained duo of glow colors, plus one ambient-
 - **Caption** (400, 13px, color Slate Muted): the footer line; shares size with link-card secondary text.
 
 ### Named Rules
-**The Loaded-Weight Rule.** Only request font weights actually fetched from Google Fonts (`400;600;700`). The header's declared weight of 800 falls outside that set and silently resolves to the nearest loaded weight (700) in-browser — either load 800 explicitly or drop the declared weight to 700 rather than leaving a weight that quietly does nothing.
+**The Loaded-Weight Rule.** Only declare a font-weight that's actually fetched from Google Fonts (`400;600;700;800`). A weight outside that set silently resolves to the nearest loaded one in-browser — if the Headline weight ever changes, add it to the fetch URL in the same change, not after.
 
 ## Layout
 
@@ -177,9 +177,9 @@ Rounded rectangles throughout, with radius scaling to the element's size: 24px f
 - **Do** keep the main panel's ambient shadow + blur as the system's single resting shadow; everything else stays flat until hovered.
 - **Do** scale corner radius with element size (24px panel → 14px card → 12px badge) rather than picking one radius for everything.
 - **Do** require a real photo for the avatar/OG/favicon set — no placeholder or initials avatar.
+- **Do** keep Slate Muted at or above 4.5:1 contrast on every surface it appears on — check it whenever the color or its background changes.
 
 ### Don't:
 - **Don't** put violet or emerald on an interactive element — they're ambient-only and the section-header dot; giving them a hover/focus role breaks the One Accent Rule.
 - **Don't** add a shadow to a card at rest — depth here is earned by interaction, not applied by default.
-- **Don't** declare a font-weight Google Fonts hasn't loaded (only 400/600/700 are fetched) — the header's 800 declaration already does this silently; fix it rather than compounding it elsewhere.
-- **Don't** ship muted text below 4.5:1 contrast — the current Slate Muted value measures ~3.8:1 on the card surface, which fails the WCAG AA bar PRODUCT.md now requires. It's a defect to fix, not a value to reuse.
+- **Don't** declare a font-weight that isn't in the Google Fonts fetch URL (`400;600;700;800`) — add the weight to the URL first, in the same change.
