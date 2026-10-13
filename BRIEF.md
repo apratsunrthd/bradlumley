@@ -49,6 +49,9 @@ no content cadence: see HANDOFF.md for why.
   do. Person JSON-LD upgraded to a `@graph` with a linked `WebSite` node;
   page also carries an explicit `robots` meta tag and `<link rel="canonical">`.
 
+- Entity consolidation (2026-10-13): Person JSON-LD now has `worksFor` Pager
+  Health and concrete healthcare-data `knowsAbout` phrases; `llms.txt` matches.
+
 ## What's in progress
 
 - PR #8 (headshot/favicon/OG tags/email/jobTitle) open, awaiting Brad's
@@ -67,6 +70,10 @@ See `TODO.md`.
 - **No branding-agency-style buildout.** Executive personal-branding
   agency ROI claims are unsourced marketing copy; not used as a basis for any
   decision here.
+- **Authority comes from off-site signals.** No credentials/resume page and
+  no blog (decided 2026-10-13). Ranking for "best healthcare data leader"
+  needs third-party corroboration; see `TODO.md` Phase 3. JSON-LD claims only
+  facts that are true — no placeholder awards/credentials.
 - **Subdomain-per-project, not domain-per-project.** Keeps side projects
   under one accumulating identity instead of scattering across dead domains
   Brad would otherwise have to buy and let lapse.
