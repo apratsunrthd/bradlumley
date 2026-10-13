@@ -27,7 +27,7 @@ come up.
 - [ ] Monthly (15 min): run "VP data analytics healthcare" and "healthcare
       data leaders" in Google, ChatGPT, Perplexity, Gemini, Claude; check GSC
       impressions for "Brad Lumley". Note results in `BRIEF.md`.
-- [ ] Verify the Pager Health URL in JSON-LD (`https://www.pager.com`) is correct.
+- [ ] Verify the Pager Health URL in JSON-LD (`https://www.pagerhealth.com`) is correct.
 
 - [x] Pick the first side project to feature in the Lab section once one is
       ready to show publicly. Undertow (iPhone focus app, live on the App
