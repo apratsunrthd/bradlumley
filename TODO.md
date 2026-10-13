@@ -12,6 +12,23 @@ come up.
 
 ## For Brad (human)
 
+- [ ] **Authority plan, Phase 3 (the main lever; no proof assets exist yet).**
+      AI/search engines rank "best healthcare data leader" from third-party
+      sources, not this site. Start with the cheapest, highest-signal items:
+      1. Align name/title/one-line bio across LinkedIn, RefHealth, and this site;
+         put "healthcare data" / "data leadership" keywords in the LinkedIn
+         headline and About.
+      2. Pitch 2-3 healthcare/data podcasts as a guest.
+      3. Submit a conference talk (HLTH, HIMSS, AHIP, Data Council).
+      4. Pitch one guest byline (Healthcare IT News, Health Data Management).
+      5. As each lands, tell Claude to add it to JSON-LD (`sameAs`, `award`,
+         etc.) and `llms.txt`.
+      Avoid pay-to-play "Top 100" lists and SEO agencies.
+- [ ] Monthly (15 min): run "VP data analytics healthcare" and "healthcare
+      data leaders" in Google, ChatGPT, Perplexity, Gemini, Claude; check GSC
+      impressions for "Brad Lumley". Note results in `BRIEF.md`.
+- [ ] Verify the Pager Health URL in JSON-LD (`https://www.pagerhealth.com`) is correct.
+
 - [x] Pick the first side project to feature in the Lab section once one is
       ready to show publicly. Undertow (iPhone focus app, live on the App
       Store) added.
