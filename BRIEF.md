@@ -15,15 +15,16 @@ Dad") links. The cycling side stopped being maintained, so it was removed
    (`projectname.bradlumley.com`) and a card in the "Lab" section, instead of
    a throwaway domain purchase per idea.
 
-RefHealth Consulting (`refhealth.consulting`) already owns "hire me for
-consulting" — this site is deliberately not a second version of that. No blog,
-no content cadence: see HANDOFF.md for why.
+This site is not a "hire me" or consulting page. RefHealth Consulting is
+deliberately **not** mentioned anywhere on it (removed 2026-10-14): Brad has a
+non-compete and colleagues who read his LinkedIn and this site. Don't re-add
+it. No blog, no content cadence: see HANDOFF.md for why.
 
 ## Current state
 
 - Static single-page site (`index.html`), no build step, no framework.
 - Hosted on GitHub Pages, custom domain via `CNAME` → `bradlumley.com`.
-- Sections: Professional (LinkedIn, RefHealth Consulting, Email) and Lab
+- Sections: Professional (LinkedIn, Email) and Lab
   (first project live: Undertow, an iPhone focus app, linking to its
   App Store listing).
 - Real headshot in place (`assets/`) for the avatar, OG/Twitter share image,
@@ -35,8 +36,10 @@ no content cadence: see HANDOFF.md for why.
   (PR #9) with headroom above the head. The original crops were centered
   on `headshot-source.jpg` and cut into the hairline; new crops are
   top-anchored (crop from the bottom, not the center).
-- Person JSON-LD includes `image`, `email`, and `knowsAbout`; `jobTitle` is
-  "VP, Data & Analytics" (chosen over vaguer executive-level phrasing —
+- Person JSON-LD includes `image`, `email`, `knowsAbout`, `worksFor` (Pager
+  Health), `alumniOf` (Molina Healthcare, Meru Health, Cigna), and `award`
+  (Integrity Award, Meru Health); `jobTitle` is "VP, Data, Analytics &
+  Insights", Brad's real title, matching LinkedIn (concrete title over vaguer executive-level phrasing —
   research showed standard concrete titles rank higher in recruiter search).
 - Google Analytics wired in (`G-ZHGLL23Y0D`), auto-injected/maintained by
   `inject-ga.js` via a GitHub Action on every push to `main`.
@@ -49,8 +52,9 @@ no content cadence: see HANDOFF.md for why.
   do. Person JSON-LD upgraded to a `@graph` with a linked `WebSite` node;
   page also carries an explicit `robots` meta tag and `<link rel="canonical">`.
 
-- Entity consolidation (2026-10-13): Person JSON-LD now has `worksFor` Pager
-  Health and concrete healthcare-data `knowsAbout` phrases; `llms.txt` matches.
+- Entity consolidation (2026-10-13/14): site copy, meta descriptions, JSON-LD,
+  and `llms.txt` all match Brad's rewritten LinkedIn headline/About
+  (healthcare data executive, 20 years, Pager scope, prior employers).
 
 ## What's in progress
 
@@ -80,8 +84,8 @@ See `TODO.md`.
 - **DNS/subdomain setup is a manual step for now** — no registrar/DNS API
   access has been granted, so each new project's subdomain is a ~2-minute
   manual DNS record (see HANDOFF.md checklist).
-- **`jobTitle` is "VP, Data & Analytics", not "Executive" or "Senior
-  Leader".** LinkedIn's 2026 recruiter-search guidance: headline/title
+- **`jobTitle` is "VP, Data, Analytics & Insights" (his real title, same as
+  LinkedIn), not "Executive" or "Senior Leader".** LinkedIn's 2026 recruiter-search guidance: headline/title
   carries ~60% of search ranking weight, and 87% of recruiters search by
   standard job-function titles rather than level-descriptor words like
   "Executive." A concrete, real title outranks a vaguer one.

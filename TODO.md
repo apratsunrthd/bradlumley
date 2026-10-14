@@ -15,9 +15,10 @@ come up.
 - [ ] **Authority plan, Phase 3 (the main lever; no proof assets exist yet).**
       AI/search engines rank "best healthcare data leader" from third-party
       sources, not this site. Start with the cheapest, highest-signal items:
-      1. Align name/title/one-line bio across LinkedIn, RefHealth, and this site;
-         put "healthcare data" / "data leadership" keywords in the LinkedIn
-         headline and About.
+      1. ~~Align LinkedIn headline/About with this site~~ Done 2026-10-14
+         (LinkedIn rewritten; site updated to match). Remaining: pin Skills
+         (Healthcare Analytics, Data Strategy, AI Transformation) and add
+         bradlumley.com to LinkedIn Featured.
       2. Pitch 2-3 healthcare/data podcasts as a guest.
       3. Submit a conference talk (HLTH, HIMSS, AHIP, Data Council).
       4. Pitch one guest byline (Healthcare IT News, Health Data Management).
